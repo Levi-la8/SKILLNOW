@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        
+        .containerr {
+            display: flex;
+            width: 80%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .form-section, .info-section {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .form-section {
+            border-left: 1px solid #ddd;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form button {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: #211681;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background:#09084e ;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #593acc;
+        }
+
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .info-item h3 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            color: #150574;
+        }
+
+        .info-item p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+
+
+
+.HERO{
+max-width: 100%;
+height: 85vh;
+overflow: hidden;
+background-image: url('contact-us-banner-collection-icons-260nw-2276052511.webp');
+background-size: cover;
+background-position: center;
+text-align: center;
+justify-content: center;
+}
+.headermar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    
+}
+.left-small{
+display: flex;
+margin-top: 5PX;
+justify-content: flex-start;
+height: 75PX;
+margin-left: 30PX;
+
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item a:hover {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+/* Sous-menus (pour les sections avec sous-sections) */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    width: 200px;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.submenu li a:hover {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+/* Afficher le sous-menu au survol */
+.menu-item:hover .submenu {
+    display: block;
+}
+
+/* Section principale */
+.hero {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item a {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+
+    .submenu li a {
+        font-size: 14px;
+    }
+}
+    
+
+ 
+
+
+   
+footer {
+    background-color: #212121;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-logo h3 {
+    margin: 10px 0;
+    font-size: 1.6rem;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-links h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff5733;
+}
+
+.footer-social {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #ccc;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ff5733;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    background-color: #333;
+    color: #ccc;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+    </style>
+</head>
+<body>
+    <div class="HERO" style="width: 100%;">
+
+        <header class="headermar">
+        
+            <img src="c:\Users\pc\Downloads\freepik_br_37bdedd6-e8db-48fa-82c1-32d96965a3cc.png" alt="ofppt" class="left-small" >
+            <nav class="navbar" >
+                <ul class="menu">
+
+                    
+                    <!-- Accueil -->
+                    <li class="menu-item">
+                        <a href="#">Accueil</a>
+                    </li>
+
+                    <!-- Etablissement -->
+                    <li class="menu-item">
+                        <a href="#">Etablissement <i class="fas fa-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">les organismes</a></li>
+                            <li><a href="#">CAD</a></li>
+                            <li><a href="#">Réglement intérieure</a></li>
+                            <li><a href="#">les absences et les retards</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    
+    
+                    <!-- Activités Parascolaires -->
+                    <li class="menu-item">
+                        <a href="#">Activités Parascolaires </a>
+                    </li>
+                    
+                    
+    
+                    <!-- Espace Stagiaires -->
+                    <li class="menu-item">
+                        <a href="#">Espace Stagiaires <i class="fas fa-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">les dates des examens </a></li>
+                            <li><a href="#">trouver un stage</a></li>
+                            <li><a href="#">emplois du temps</a></li>
+                            <li><a href="#">Agenda</a></li>
+                        </ul>
+                    </li>
+
+                    
+    
+                    <!-- Orientation -->
+                    <li class="menu-item">
+                        <a href="#">Orientation <i class="fas fa-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#"> Gestion et Commerce</a></li>
+                            <li><a href="#"> Digital et Intelligence Artificielle</a></li>
+                        </ul>
+                    </li>
+
+                    
+    
+                    <!-- Contact -->
+                    <li class="menu-item">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </header>
+    </div><br>
+    <hr style="border: 1px solid #09084e; width: 1300px;">
+    <br>
+
+
+
+
+    
+    <div class="containerr" >
+        <div class="form-section">
+            <form>
+                <label for="name">Nom et Prénom</label>
+                <input type="text" id="name" name="name" placeholder="الاسم الكامل">
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="البريد الإلكتروني">
+                
+                <label for="subject">Le sujet</label>
+                <input type="text" id="subject" name="subject" placeholder="الموضوع">
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="اكتب رسالتك هنا"></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+        
+        <div class="info-section">
+            <h1>ESPACE ENTREPRISE</h1>
+            <div class="info-item">
+                <a class="fas fa-envelope"></a>
+                <div>
+                    <h3>Courriel</h3>
+                    <p>contact@olppt.ma</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <a class="fas fa-phone"></a>
+                <div>
+                    <h3>Numéro de contact</h3>
+                    <p>+212 (05) 22 63 44 44</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <a class="fas fa-map-marker-alt"></a>
+                <div>
+                    <h3>Adresse</h3>
+                    <p>Siège: Intersection Route nationale n°11 et Route BD 90, BP 42007, 20 270 Route Nouaceur, Sidi Maârouf - Casablanca</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><hr style="border: 1px solid #09084e; width: 1300px;"> <br>
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="c:\Users\pc\Downloads\freepik_br_37bdedd6-e8db-48fa-82c1-32d96965a3cc.png" alt="Logo">
+                <h3 >ISTA <div style="color: orange;">Roche Noir</div></h3>
+                <p>Formations techniques spécialisées pour un avenir prometteur.</p>
+            </div>
+            
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+                <h4>Etablissement</h4>
+                <hr style="border: 2px solid orange; width: 150PX; margin-left: 1PX;">
+                <ul>
+                    <li><a href="#">les organismes</a></li>
+                    <li><a href="#">CAD</a></li>
+                    <li><a href="#">Réglement intérieure</a></li>
+                    <li><a href="#">les absences et les retards</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Espase Stagiaire</h4>
+                <hr style="border: 2px solid orange; width: 150PX; margin-left: 1PX;">
+                <ul>
+                    <li><a href="#">les dates des examens</a></li>
+                    <li><a href="#">trouver un stage</a></li>
+                    <li><a href="#">emplois du temps</a></li>
+                    <li><a href="#">Agenda</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Orientation</h4>
+                <hr style="border: 2px solid orange; width: 150PX; margin-left: 1PX;">
+                <ul>
+                    <li><a href="#">Gestion et Commerce</a></li>
+                    <li><a href="#">Digital et Intelligence Artificielle</a></li>
+                    
+                </ul>
+            </div>
+
+
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Notre Etablissement | Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>

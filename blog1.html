@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Actualités sur l'IA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6E3Wq8lNfocpOQ3pXK5nXjVhl6pOrL49X2ltoVnnfJdzRjsw9F0gH9dzMi" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            
+            font-family: 'Arial', sans-serif;
+        }
+
+
+
+       
+        nav {
+            
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond noir transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+        }
+
+        .nav-link:hover {
+            color: #00B5D8 !important;
+            transform: scale(1.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            color: white !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-link {
+            position: relative;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #00B5D8;
+            transition: all 0.3s ease;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .nav-link:hover:before {
+            width: 100%;
+        }
+
+        .navbar-brand:hover {
+            color: #00B5D8 !important;
+            transform: translateY(-5px);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link:focus {
+            color: #00B5D8 !important;
+            transform: translateY(-5px);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #00B5D8, black);
+
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+
+        .card-text {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            line-height: 1.8;
+        }
+
+        
+        .news-card {
+            margin-bottom: 30px;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-size: 100% 100PX;
+
+        }
+
+
+
+
+        
+   /* Footer Section */
+   footer {
+    background-color: #212121;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 50PX;
+ }
+
+.footer-container {
+   display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-logo h3 {
+    margin: 10px 0;
+    font-size: 1.6rem;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-links h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #00c6ff;
+}
+
+.footer-social {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #ccc;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #00c6ff;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    background-color: #333;
+    color: #ccc;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+        
+  
+
+    </style>
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-light px-4">
+        <a class="navbar-brand" href="#">Skill<span style="color: #00B5D8;">Now</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="skiilnow.html"> Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Nos Spécialisations"> Nos Spécialisations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#outils">Outils de Programmation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#articles">Blog</a>
+            </li>
+            <a class="nav-link" href="#about">À propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <h1>Les Dernières Avancées de l'Intelligence Artificielle</h1>
+    <p>Restez informé sur les dernières innovations en IA, les applications et les tendances émergentes.</p>
+</div>
+
+
+    
+<!-- Container for news -->
+<div class="container my-5">
+    <div class="row">
+        <!-- News Card 1 -->
+        <div class="col-md-12 news-card">
+            
+                <img src="AIBlogBanner-1-1024x546.png" class="card-img-top" alt="AI Image">
+                <div class="card-body">
+                    <h5 class="card-title">L'IA au service de la santé</h5>
+                    <p class="card-text">
+                        L'intelligence artificielle transforme de plus en plus le secteur de la santé. De l'amélioration des diagnostics médicaux à la médecine prédictive, 
+                        les applications de l'IA permettent de détecter les maladies à un stade plus précoce, d'optimiser les traitements et même de personnaliser les soins 
+                        en fonction des besoins spécifiques des patients. Grâce à des systèmes de machine learning, l'IA analyse les données des patients, y compris les antécédents 
+                        médicaux, les images médicales et les résultats des tests, pour offrir des recommandations précises aux médecins. Cette avancée ouvre la voie à des soins plus 
+                        efficaces, tout en réduisant les erreurs humaines et en facilitant l'accès aux soins dans des régions éloignées.
+                    </p>
+                </div>
+            
+        </div>
+        
+        <!-- News Card 2 -->
+        <div class="col-md-12 news-card">
+            
+                <img src="AI-in-Finance_French.png" class="card-img-top" alt="AI Image">
+                <div class="card-body">
+                    <h5 class="card-title">Les applications de l'IA dans la finance</h5>
+                    <p class="card-text">
+                        L'intelligence artificielle révolutionne le secteur financier, en particulier dans des domaines tels que la gestion des investissements, l'analyse des risques et 
+                        la détection des fraudes. Grâce aux algorithmes d'IA, les banques et institutions financières sont capables de prédire les tendances du marché et d'ajuster les 
+                        stratégies d'investissement en conséquence. Les systèmes de machine learning sont également utilisés pour analyser de grandes quantités de données et détecter des 
+                        anomalies pouvant indiquer des activités frauduleuses. L'IA améliore ainsi l'efficacité opérationnelle et permet aux entreprises de prendre des décisions plus informées 
+                        et de mieux se protéger contre les risques financiers.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Card 3 -->
+        <div class="col-md-12 news-card">
+            
+                <img src="ai-human-partnership-created-with-generative-ai_912153-83.avif" class="card-img-top" alt="AI Image">
+                <div class="card-body">
+                    <h5 class="card-title">L'IA et l'éthique : Un défi crucial</h5>
+                    <p class="card-text">
+                        Le développement rapide de l'intelligence artificielle soulève des questions éthiques cruciales. L'un des défis majeurs est de garantir que les systèmes d'IA 
+                        prennent des décisions de manière transparente et équitable. Par exemple, les biais algorithmiques peuvent se produire lorsque les données utilisées pour entraîner 
+                        les modèles d'IA ne sont pas représentatives de la diversité humaine, ce qui peut entraîner des discriminations dans des domaines comme le recrutement ou le crédit. 
+                        De plus, la question de la vie privée est de plus en plus préoccupante, car les systèmes d'IA collectent et analysent d'énormes quantités de données personnelles. 
+                        Il est donc essentiel de trouver des moyens de réguler l'IA pour s'assurer qu'elle soit utilisée de manière éthique et respectueuse des droits fondamentaux des individus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            
+            <h3 >Notre platforme<div style="color: #008C9E;">SKILLNOW</div></h3>
+            <p>Orientation à des formation professionelle <br>pour un avenir prometteur.</p>
+        </div>
+        
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+            <h4>Nos Spécialisations
+            </h4>
+            <hr style="border: 2px solid #29d9d5; width: 150PX; margin-left: 1PX;">
+            <ul>
+                <li><a href="dev web.html">Développement Web</a></li>
+                <li><a href="dev mobile.html">Développement Mobile</a></li>
+                <li><a href="IA.html">Intelligence Artificielle</a></li>
+                <li><a href="sécurité info.html">Sécurité de l'Information</a></li>
+                <li><a href="Crypto-monnaies.html">Crypto-monnaies</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-links">
+            <h4>Outils de Programmation</h4>
+            <hr style="border: 2px solid #29d9d5; width: 150PX; margin-left: 1PX;">
+            <ul>
+                <li><a href="#">Visual Studio Code</a></li>
+                <li><a href="#">Git</a></li>
+                <li><a href="#">Node.js</a></li>
+                <li><a href="#">Docker</a></li>
+                <li><a href="#">Android Studio</a></li>
+                <li><a href="#">Xcode</a></li>
+                
+            </ul>
+        </div>
+
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 SKILLNOW | Tous droits réservés</p>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
